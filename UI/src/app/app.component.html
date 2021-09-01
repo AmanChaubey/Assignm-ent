@@ -1,0 +1,55 @@
+<h5>Sales Event</h5>
+<form [formGroup]="entryForm">
+  <div class="row">
+    <div class="col-md-9">
+      <form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Discount Type*</th>
+              <th scope="col">Discount Amount </th>
+              <th scope="col">Event Price*</th>
+              <th scope="col">Start Date*</th>
+              <th scope="col">End Date*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                    checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Dollar
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Percentage
+                  </label>
+                </div>
+              </td>
+              <td>
+                <label for="discountAmount2" class="sr-only">Password</label>
+                <input type="discountAmount" class="form-control" id="discountAmount2" placeholder="Discount Amount">
+              </td>
+              <td>
+                <label for="eventPrice2" class="sr-only">Password</label>
+                <input type="eventPrice" class="form-control" id="eventPrice2" placeholder="Event Price" readonly>
+              </td>
+              <td>
+                <mat-form-field appearance="fill">
+                  <mat-label>Choose a date</mat-label>
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</form>
